@@ -27,6 +27,12 @@ ffmpeg -sseof -00:10:00 -i input.mp4 -c copy output.mp4
 
 ```
 
+You can re-encode the video during video trimming by changing the "-c" argument. For example to make the video encode format 'x264' and audio to 'aac'.
 
+```
+
+fmpeg -ss 00:03:15 -i input.mp4 -t 00:15:00 -c:v libx264 -c:a aac output.mp4
+
+```
 
 
